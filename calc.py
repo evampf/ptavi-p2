@@ -18,6 +18,11 @@ def mult(op1,op2):
 	return op1 * op2
 
 def div(op1,op2):
+    """Function to divide the operands """
+    try:
+        return op1/op2
+    except:     
+        sys.exit("Error: Divide 0")
 
 if __name__ == "__main__":
     try:
@@ -32,6 +37,8 @@ if __name__ == "__main__":
         result = minus(operando1, operando2)
     elif sys.argv[2] == "multiplica":
         result = mult(operando1,operando2)
+    elif sys.argv[2] == "divide":
+        result = div(operando1,operando2)
     else:
         sys.exit('Operación sólo puede ser sumar o restar.')
 
