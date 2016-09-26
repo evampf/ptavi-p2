@@ -12,7 +12,6 @@ if __name__ == "__main__":
 
         datos = csv.reader(operaciones)
         calculadora2 = calcoohija.CalculadoraHija()
-    
         for linea in datos:
             operacion = linea[0]
             numeros = linea[1:]
@@ -32,9 +31,6 @@ if __name__ == "__main__":
                     resultado = calculadora2.divide(resultado, int(num))
 
             else:
-                sys.exit('Operación sólo puede ser sumar, restar, multiplicar o dividir.')
+                sys.exit('Operación inválida.')
 
             print(resultado)
-
-
-	

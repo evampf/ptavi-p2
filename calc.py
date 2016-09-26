@@ -13,16 +13,18 @@ def minus(op1, op2):
     """ Function to substract the operands """
     return op1 - op2
 
-def mult(op1,op2):
-	""" Function to mult the operands """
-	return op1 * op2
 
-def div(op1,op2):
-    """Function to divide the operands """
+def mult(op1, op2):
+    return op1 * op2
+
+
+def div(op1, op2):
+
     try:
         return op1/op2
-    except:     
+    except:
         sys.exit("Error: Divide 0")
+
 
 if __name__ == "__main__":
     try:
@@ -36,9 +38,9 @@ if __name__ == "__main__":
     elif sys.argv[2] == "resta":
         result = minus(operando1, operando2)
     elif sys.argv[2] == "multiplica":
-        result = mult(operando1,operando2)
+        result = mult(operando1, operando2)
     elif sys.argv[2] == "divide":
-        result = div(operando1,operando2)
+        result = div(operando1, operando2)
     else:
         sys.exit('Operación sólo puede ser sumar o restar.')
 

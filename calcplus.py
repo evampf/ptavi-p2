@@ -9,13 +9,9 @@ import calcoohija
 operaciones = open('numeros.csv', 'r')
 lineas = operaciones.readlines()
 
-
-
 if __name__ == "__main__":
 
-
     calculadora2 = calcoohija.CalculadoraHija()
-    
     for linea in lineas:
         operacion = linea.split(',')[0]
         numeros = linea.split(',')[1:]
@@ -35,13 +31,6 @@ if __name__ == "__main__":
                 resultado = calculadora2.divide(resultado, int(num))
 
         else:
-            sys.exit('Operación sólo puede ser sumar, restar, multiplicar o dividir.')
+            sys.exit('Operación inválida.')
 
         print(resultado)
-
-
-	
-
-
-
-
